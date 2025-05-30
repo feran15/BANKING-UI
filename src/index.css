@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@keyframes subtle-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px); /* adjust for gentler bounce */
+    }
+  }
+  
+  .subtle-bounce {
+    animation: subtle-bounce 1.2s ease-in-out infinite;
+  }
+  
