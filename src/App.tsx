@@ -4,6 +4,7 @@ import { Security } from './Components/Security'
 import { Savings } from './Components/Savings'
 import { Section } from "./Components/Section"
 import { Header }  from './Components/Header'
+ import { Subfooter } from "./Components/Subfooter"
 export default function App() {
   return (
   <div className= "bg-[rgb(242,247,248)] font-Jakarta, sans-serif">
@@ -13,6 +14,7 @@ export default function App() {
       <Savings/>
       <Section/>
       <Header/>
+     <Subfooter/> 
     </div>
   )
 }
