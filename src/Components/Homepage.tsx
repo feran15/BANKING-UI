@@ -21,11 +21,11 @@ export const Homepage: React.FC = () => {
 
                 {/* Buttons */}
                 <div className="mt-5 flex gap-5 font-semibold text-white">
-                    <button className="flex items-center bg-[rgb(18,34,49)] hover:bg-black transition duration-300 ease-in-out transform hover:scale-105 rounded-lg px-3 py-3 subtle-bounce">
+                    <button className="flex items-center bg-[rgb(18,34,49)] hover:bg-black transition duration-300 ease-in-out cursor-pointer transform hover:scale-105 rounded-lg px-3 py-3 subtle-bounce">
                         <img src="/white-logo.svg" className="w-5 me-2" alt="Apple logo" />
                         Get on iPhone
                     </button>
-                    <button className="flex items-center bg-[rgb(18,34,49)] hover:bg-black transition duration-300 ease-in-out transform hover:scale-105 rounded-lg px-3 py-3 subtle-bounce">
+                    <button className="flex items-center bg-[rgb(18,34,49)] hover:bg-black transition duration-300 ease-in-out cursor-pointer transform hover:scale-105 rounded-lg px-3 py-3 subtle-bounce">
                         <img src="/google-icon.svg" className="w-5 me-2" alt="Google Play logo" />
                         Get on Android
                     </button>
