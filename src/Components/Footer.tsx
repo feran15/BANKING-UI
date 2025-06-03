@@ -1,3 +1,8 @@
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 export const Footer = () => {
     return (
         <footer className="bg-gray-100 mt-[30px] px-6 py-10 text-[rgb(18,34,49)]">
@@ -68,19 +73,24 @@ export const Footer = () => {
                 {/* Social Links */}
                 <div className="flex gap-6">
                     <a href="#" aria-label="Facebook">
-                        <img src="/icons/facebook.svg" alt="Facebook" className="h-6 w-6" />
+                        <FaFacebookF />
+                        {/* <img src="/icons/facebook.svg" alt="Facebook" className="h-6 w-6" /> */}
                     </a>
                     <a href="#" aria-label="Instagram">
-                        <img src="/icons/instagram.svg" alt="Instagram" className="h-6 w-6" />
+                        <FaInstagram />
+                        {/* <img src="/icons/instagram.svg" alt="Instagram" className="h-6 w-6" /> */}
                     </a>
                     <a href="#" aria-label="Twitter">
-                        <img src="/icons/twitter.svg" alt="Twitter" className="h-6 w-6" />
+                            <FaTwitter />
+                        {/* <img src="/icons/twitter.svg" alt="Twitter" className="h-6 w-6" /> */}
                     </a>
                     <a href="#" aria-label="TikTok">
-                        <img src="/icons/tiktok.svg" alt="TikTok" className="h-6 w-6" />
+                            <FaTiktok />
+                        {/* <img src="/icons/tiktok.svg" alt="TikTok" className="h-6 w-6" /> */}
                     </a>
                     <a href="#" aria-label="YouTube">
-                        <img src="/icons/youtube.svg" alt="YouTube" className="h-6 w-6" />
+                            <IoLogoYoutube />
+                        {/* <img src="/icons/youtube.svg" alt="YouTube" className="h-6 w-6" /> */}
                     </a>
                 </div>
             </div>
