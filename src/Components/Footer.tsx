@@ -18,9 +18,10 @@ export const Footer = () => {
                 <img src="/fast.svg" alt="Fast Company Logo" className="h-8 sm:h-10" />
                 <img src="/cio.svg" alt="CIO Logo" className="h-8 sm:h-10" />
             </div>
-
+            
             {/* Main Footer Grid */}
-            <div className="flex flex-col lg:flex-row justify-between mt-12 gap-10">
+            <div className="flex flex-col lg:flex-row justify-around mt-12 gap-10">
+            <div className="">
                 {/* Logo */}
                 <div className="flex justify-center lg:justify-start">
                     <img src="/logo.svg" alt="Company Logo" className="w-32" />
@@ -57,20 +58,11 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-
             {/* Contact Info and Social Icons */}
             <div className="mt-12 flex flex-col lg:flex-row justify-between items-center gap-6 text-center lg:text-left">
                 {/* Contact Info */}
                 <div>
-                    <p className="font-semibold text-lg">Contact Us</p>
-                    <p className="font-light mt-2 max-w-md">
-                        Tesmot house, Abdulrahman Okene close, Victoria Island, Lagos, Nigeria.
-                    </p>
-                    <p className="font-light mt-2">contact@piggyvest.com</p>
-                    <p className="font-light mt-1">+234 700 933 9339</p>
-                </div>
-
-                {/* Social Links */}
+                      {/* Social Links */}
                 <div className="flex gap-6">
                     <a href="#" aria-label="Facebook">
                         <FaFacebookF />
@@ -92,6 +84,13 @@ export const Footer = () => {
                             <IoLogoYoutube />
                         {/* <img src="/icons/youtube.svg" alt="YouTube" className="h-6 w-6" /> */}
                     </a>
+                </div>
+                    <p className="font-light mt-2 max-w-md">
+                        Tesmot house, Abdulrahman Okene close, Victoria Island, Lagos, Nigeria.
+                    </p>
+                    <p className="font-light mt-2">contact@piggyvest.com</p>
+                    <p className="font-light mt-1">+234 700 933 9339</p>
+                </div>
                 </div>
             </div>
         </footer>
