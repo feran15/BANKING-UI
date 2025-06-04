@@ -20,7 +20,7 @@ type AuthToggleProps = {
   setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const AuthPage: React.FC = () => {
+ export const AuthPage: React.FC = () => {
   const [isLogin, setIsLogin] = useState<boolean>(true);
 
   return (
@@ -317,5 +317,3 @@ const Login: React.FC<AuthToggleProps> = ({ setIsLogin }) => {
     </>
   );
 };
-
-export default AuthPage;
