@@ -6,6 +6,7 @@ import { Section } from "./Components/Section"
 import { Header }  from './Components/Header'
  import { Subfooter } from "./Components/Subfooter"
  import { Footer } from "./Components/Footer"
+ import { Auth } from './Components/Auth'
 export default function App() {
   return (
   <div className= "bg-[rgb(242,247,248)] font-Jakarta, sans-serif">
@@ -17,6 +18,7 @@ export default function App() {
       <Header/>
      <Subfooter/> 
      <Footer/>
+     <Auth/>
     </div>
   )
 }
