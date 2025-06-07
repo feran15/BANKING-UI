@@ -84,7 +84,7 @@ const SignUp: React.FC<AuthToggleProps> = ({ setIsLogin }) => {
   const onSubmit = async (data: AuthFormData) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "http://localhost:4000/api/User /register",
         data
       );
       await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -243,7 +243,7 @@ const Login: React.FC<AuthToggleProps> = ({ setIsLogin }) => {
   const onSubmit = async (data: AuthFormData) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "http://localhost:4000/api/User/login",
         data
       );
       await new Promise((resolve) => setTimeout(resolve, 2000));
