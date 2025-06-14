@@ -104,7 +104,7 @@ const LoginForm = ({ switchToSignup }: { switchToSignup: () => void }) => {
 
   const onSubmit = async (data: AuthFormData) => {
     try {
-      await axios.post("/api/auth/login", data);
+      await axios.post(process.env.LOGIN_URL, data);
       toast.success("Login successful!");
     } catch (error) {
       handleAuthError(error, "login");
