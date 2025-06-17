@@ -68,7 +68,7 @@ export const SignupForm = ({ switchToLogin }: { switchToLogin: () => void }) => 
           validate: value => value === watch("password") || "Passwords do not match"
         })} error={errors.confirmPassword} />
 
-        <CheckBoxInput id="terms" label="I accept all terms & conditions" {...register("terms", { required: "You must accept terms" })} error={errors.terms} />
+        <CheckBoxInput id="terms" label="I accept all terms & conditions" {...register("terms", { required: "You must accept terms" })} />
 
         <SubmitButton loading={isSubmitting}>{isSubmitting ? "Creating account..." : "Sign Up"}</SubmitButton>
       </form>
