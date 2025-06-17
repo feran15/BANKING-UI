@@ -11,7 +11,7 @@ import {
   SubmitButton,
   SocialAuthButton,
   handleAuthError
-} from "./AuthUI";
+} from "./Auth";
 
 type AuthFormData = {
   email: string;
