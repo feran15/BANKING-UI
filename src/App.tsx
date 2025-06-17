@@ -7,29 +7,29 @@ import { Section } from "./Components/Section";
 import { Header } from './Components/Header';
 import { Subfooter } from "./Components/Subfooter";
 import { Footer } from "./Components/Footer";
-import { AuthHeader } from "./Components/Auth";
-import { SignupForm } from "./Components/SignupForm"
-import { LoginForm } from "./Components/LoginForm"
+import { AuthPage } from "./Components/AuthPage"; // single wrapper for login/signup
+
 export default function App() {
   return (
     <Router>
-      <div className="bg-[rgb(242,247,248)] font-Jakarta, sans-serif">
+      <div className="bg-[rgb(242,247,248)] font-Jakarta">
         <Nav />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Homepage />
-              <Security />
-              <Savings />
-              <Section />
-              <Header />
-              <Subfooter />
-              <Footer />
-              <AuthHeader/>
-              <LoginForm/>
-            </>
-          } />
-          <Route path="/auth" element={<SignupForm />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Homepage />
+                <Security />
+                <Savings />
+                <Section />
+                <Header />
+                <Subfooter />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/auth" element={<AuthPage />} />
         </Routes>
       </div>
     </Router>
