@@ -7,8 +7,9 @@ import { Section } from "./Components/Section";
 import { Header } from './Components/Header';
 import { Subfooter } from "./Components/Subfooter";
 import { Footer } from "./Components/Footer";
-import { AuthPage } from "./Components/Auth";
-
+import { AuthHeader } from "./Components/Auth";
+import { SignupForm } from "./Components/SignupForm"
+import { LoginForm } from "./Components/LoginForm"
 export default function App() {
   return (
     <Router>
@@ -24,9 +25,11 @@ export default function App() {
               <Header />
               <Subfooter />
               <Footer />
+              <AuthHeader/>
+              <LoginForm/>
             </>
           } />
-          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/auth" element={<SignupForm />} />
         </Routes>
       </div>
     </Router>
