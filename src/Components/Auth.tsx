@@ -15,7 +15,7 @@ export const AuthHeader = ({ title, subtitle }: { title: string; subtitle: strin
 export const AuthFooter = ({ prompt, actionText, onAction }: { prompt: string; actionText: string; onAction: () => void }) => (
   <p className="mt-4 text-center text-gray-600">
     {prompt}{" "}
-    <button type="button" onClick={onAction} className="font-medium text-indigo-600 hover:text-indigo-500">
+    <button type="button" onClick={onAction} className="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">
       {actionText}
     </button>
   </p>
