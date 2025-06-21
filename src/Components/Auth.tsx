@@ -26,7 +26,7 @@ export const FormInput = React.forwardRef<HTMLInputElement, { label: string; err
   ({ label, error, type, ...props }, ref) => (
     <div>
       <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
-      <input ref={ref} type={type} className={`w-full p-3 border rounded-md ${error ? "border-red-500" : "border-gray-300"} cursor-pointer`} {...props} />
+      <input ref={ref} type={type} className={`w-full p-3 border rounded-md ${error ? "border-red-500" : "border-gray-300"}`} {...props} />
       {error && <p className="mt-1 text-sm text-red-600">{error.message}</p>}
     </div>
   )
@@ -44,7 +44,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, {
       <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
       <div className="relative">
         <input ref={ref} type={visible ? "text" : "password"} className={`w-full p-3 border rounded-md ${error ? "border-red-500" : "border-gray-300"}`} {...props} />
-        <button type="button" className="absolute right-3 top-3.5 text-gray-500 hover:text-gray-700" onClick={onToggleVisibility}>
+        <button type="button" className="absolute right-3 top-3.5 text-gray-500 hover:text-gray-700 cursor-pointer" onClick={onToggleVisibility}>
           {visible ? <FaEyeSlash /> : <FaEye />}
         </button>
       </div>
