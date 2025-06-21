@@ -26,7 +26,7 @@ export const FormInput = React.forwardRef<HTMLInputElement, { label: string; err
   ({ label, error, type, ...props }, ref) => (
     <div>
       <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
-      <input ref={ref} type={type} className={`w-full p-3 border rounded-md ${error ? "border-red-500" : "border-gray-300"}`} {...props} />
+      <input ref={ref} type={type} className={`w-full p-3 border rounded-md ${error ? "border-red-500" : "border-gray-300"} cursor-pointer`} {...props} />
       {error && <p className="mt-1 text-sm text-red-600">{error.message}</p>}
     </div>
   )
@@ -58,7 +58,7 @@ export const SubmitButton = ({ loading, children }: { loading: boolean; children
   <button
     type="submit"
     disabled={loading}
-    className={`w-full bg-black text-white p-3 rounded-md hover:bg-gray-800 transition-colors ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+    className={`w-full bg-black text-white p-3 rounded-md hover:bg-gray-800 transition-colors cursor-pointer ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
   >
     {children}
   </button>
