@@ -7,7 +7,9 @@ import { Section } from "./Components/Section";
 import { Header } from './Components/Header';
 import { Subfooter } from "./Components/Subfooter";
 import { Footer } from "./Components/Footer";
-import { AuthPage } from "./Components/AuthPage"; // single wrapper for login/signup
+import { AuthPage } from "./Components/AuthPage";
+import { DashboardLayout } from "./Components/DashboardLayout";
+import { DashboardHome } from "./Components/Dashboard/Home"; // 👈 Import this
 
 export default function App() {
   return (
@@ -30,6 +32,14 @@ export default function App() {
             }
           />
           <Route path="/auth" element={<AuthPage />} />
+
+          {/* ✅ DASHBOARD ROUTES */}
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<DashboardHome />} />
+            {/* You can later add more here like: */}
+            {/* <Route path="transactions" element={<TransactionsPage />} /> */}
+            {/* <Route path="send" element={<SendMoneyPage />} /> */}
+          </Route>
         </Routes>
       </div>
     </Router>
