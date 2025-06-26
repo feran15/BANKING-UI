@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: {} => void;
 }
 
 const navLinks = [
