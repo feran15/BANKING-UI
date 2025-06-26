@@ -8,8 +8,8 @@ import { Header } from './Components/Header';
 import { Subfooter } from "./Components/Subfooter";
 import { Footer } from "./Components/Footer";
 import { AuthPage } from "./Components/AuthPage";
-import { DashboardLayout } from "./Components/DashboardLayout";
-import { DashboardHome } from "./Components/Home"; // 👈 Import this
+import  DashboardLayout from "./Components/DashboardLayout";
+import  DashboardHome  from "./Components/Home"; // 👈 Import this
 
 export default function App() {
   return (
