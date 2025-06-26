@@ -9,7 +9,7 @@ import { Subfooter } from "./Components/Subfooter";
 import { Footer } from "./Components/Footer";
 import { AuthPage } from "./Components/AuthPage";
 import { DashboardLayout } from "./Components/DashboardLayout";
-import { DashboardHome } from "./Components/Dashboard/Home"; // 👈 Import this
+import { DashboardHome } from "./Components/Home"; // 👈 Import this
 
 export default function App() {
   return (
