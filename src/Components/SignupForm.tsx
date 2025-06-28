@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"
 import {
   AuthHeader,
   AuthFooter,
@@ -32,16 +33,28 @@ export const SignupForm = ({ switchToLogin }: { switchToLogin: () => void }) => 
   } = useForm<AuthFormData>({ mode: "onBlur" });
 
   const [show, setShow] = useState({ password: false, confirmPassword: false });
-
+   const navigate = useNavigate(); // ✅ for redirect
+// Getting backend data after signing up
   const onSubmit = async (data: AuthFormData) => {
     try {
-      await axios.post(import.meta.env.VITE_BACKEND_URL, data);
+    const res = await axios.post(import.meta.env.VITE_BACKEND_URL, data);
+
+         // ✅ Save token to localStorage
+      localStorage.setItem("token", res.data.token);
+
+       // ✅ Optionally save user info
+      if (res.data.user) {
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+      }
+
       toast.success("Account created successfully!");
-      setTimeout(switchToLogin, 1500);
-    } catch (error) {
-      handleAuthError(error, "registration");
-    }
+      // navigate directly to dashboard
+          navigate("/dashboard");
+          } catch (error) {
+            handleAuthError(error, "login");
+          }
   };
+
 
   return (
     <>

@@ -18,7 +18,7 @@ export default function TransactionsPage() {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await axios.get("http://localhost:5000/api/transactions", {
+        const res = await axios.get(import.meta.env.VITE_TRANSACTION_URL, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
