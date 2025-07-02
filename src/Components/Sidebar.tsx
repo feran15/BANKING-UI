@@ -13,6 +13,7 @@ const navLinks = [
   { name: "Transactions", path: "/dashboard/transactions", icon: <FaExchangeAlt /> },
   { name: "Send Money", path: "/dashboard/send", icon: <FaMoneyCheckAlt /> },
   { name: "Profile", path: "/dashboard/profile", icon: <FaUser /> },
+  {name: " New Bank Account", path: "/dashboard/Create", icon: <FaUser />}
 ];
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
