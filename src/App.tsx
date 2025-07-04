@@ -8,8 +8,9 @@ import { Header } from './Components/Header';
 import { Subfooter } from "./Components/Subfooter";
 import { Footer } from "./Components/Footer";
 import { AuthPage } from "./Components/AuthPage";
-import  DashboardLayout from "./Components/DashboardLayout";
-import  DashboardHome  from "./Components/Home"; // 👈 Import this
+import DashboardLayout from "./Components/DashboardLayout";
+import DashboardHome from "./Components/Home";
+import { SendMoneyPage } from "./Components/SendMoney";
 
 export default function App() {
   return (
@@ -36,9 +37,7 @@ export default function App() {
           {/* ✅ DASHBOARD ROUTES */}
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<DashboardHome />} />
-            {/* You can later add more here like: */}
-            {/* <Route path="transactions" element={<TransactionsPage />} /> */}
-            {/* <Route path="send" element={<SendMoneyPage />} /> */}
+            <Route path="send" element={<SendMoneyPage />} /> {/* ✅ Corrected here */}
           </Route>
         </Routes>
       </div>
