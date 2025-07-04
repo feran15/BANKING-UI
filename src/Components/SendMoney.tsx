@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-
+import axios from "axios"
+import { toast } from 'react-toastify';
 type SendMoneyFormInputs = {
   recipient: string;
   amount: number;
@@ -16,10 +17,14 @@ export const SendMoneyPage: React.FC = () => {
     try {
       // Send money logic here
       console.log('Sending money to:', data);
-      // You can replace this with your API call (axios.post...)
-      // Reset form or show success notification
+       const res = await axios.post(import.meta.env.VITE_TRANSACTION_URL, data);
+      toast.success("Transfer Successful")
+       if (res.data.user) {
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+      }
     } catch (err) {
       console.error(err);
+      toast.error("Something went wrong")
     } finally {
       setIsSubmitting(false);
     }
