@@ -37,7 +37,7 @@ export default function App() {
           {/* ✅ DASHBOARD ROUTES */}
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<DashboardHome />} />
-            <Route path="send" element={<SendMoneyPage />} /> {/* ✅ Corrected here */}
+            <Route path="send" element={<SendMoneyPage />} />
           </Route>
         </Routes>
       </div>
