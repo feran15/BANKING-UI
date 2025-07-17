@@ -1,5 +1,27 @@
-// src/pages/Dashboard/Home.tsx
+import { useEffect, useState } from 'react';
+import { SetTransactionPinModal } from '../components/TransactionPinModal';
+import axios from 'axios';
+
 export default function DashboardHome() {
+  const [showPinModal, setShowPinModal] = useState(false);
+
+  useEffect(() => {
+    const checkTransactionPin = async () => {
+      try {
+        const res = await axios.get('/api/users/me'); // adjust to your actual route
+        const hasPin = res.data?.transactionPin;
+        if (!hasPin) {
+          setShowPinModal(true);
+        }
+      } catch (err) {
+        console.error('Failed to check PIN status:', err);
+        setShowPinModal(true); // optionally force modal open if request fails
+      }
+    };
+
+    checkTransactionPin();
+  }, []);
+
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-bold">Welcome back, Paul 👋</h1>
@@ -23,6 +45,10 @@ export default function DashboardHome() {
           <p className="text-lg font-medium">3 Transactions</p>
         </div>
       </div>
+
+      {showPinModal && (
+        <SetTransactionPinModal onClose={() => setShowPinModal(false)} />
+      )}
     </div>
   );
 }
